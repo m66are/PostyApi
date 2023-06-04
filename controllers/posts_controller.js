@@ -1,11 +1,21 @@
-import postMessage from '../Models/PostModel.js'
+import postMessage from '../models/post_model.js'
 
 
 export const getPosts = async (req, res) => {
     
         try {
-            const postMessages = await postMessage.find();
-            res.status(200).json(postMessages);
+           
+            res.status(200).json(
+                [
+                    {
+                        "title": "test",
+                      "imageUrl" : "hhhhhh",
+                    "message": "test",
+                    "createdAt": "2021-07-07T15:00:00.000Z",
+                    "_id": "60e5b3b3c8b0c2b4b4f0b0a0"
+                    }
+                ]
+            );
         
             
         } catch (error) {
